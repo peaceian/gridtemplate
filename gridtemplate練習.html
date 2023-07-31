@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-template練習</title>
+    <style>
+        .container {display: grid;grid-template-columns: 1fr 7fr 2fr;grid-template-rows: auto;grid-column-gap:10px;grid-row-gap: 10px;}
+        /*template-column makes a 4 column lines grid container.*/
+        /*the parent container needs to have the "display: grid" to build the grid template.*/
+        .grid {color:whitesmoke;padding: 25px;font-size:1.5rem;text-align:center;border:solid 3px white;}
+        .header {grid-column: 1 / 4;background-color: #0489a1}/*start from column line 1 to column line 4.*/
+        .main {grid-column:2 / 4;background-color: #88cace;}/*from column line 2 to column line 4.*/
+        .sidebar {grid-column: 1/2;grid-row: 2/7;background-color: #6bc263;}/*column line 1 to column line 2, row line 2 to row line 7.*/
+        .content {grid-column: 2/4;grid-row:3/7;background-color: #f5c531;}
+        .images {grid-column: 1/3 ;grid-row:7/8;background-color: #2BB673;}
+        .post {grid-column: 3/4; grid-row:7/8; background-color: #fa9dc4;}
+        .footer {grid-column: 1/4;grid-row:8/9;background-color: #FFA500;}
+        p {font-size: larger;line-height: 2;overflow:auto;height: 900px;}
+        img {object-fit:fill;}
+        ul li {list-style-type:none;position: relative;left: -60px;}/*adjust the lists.*/
+        ul li a {text-decoration: none;color:cornflowerblue;}
+
+    </style>
+</head>
+<body>
+    <div class="grid container">
+        <div class="grid header">
+            <h1>Investigation of anti-hepatocellular carcinoma agent, Chinese Herbal Medicine M1</h1>
+        </div>
+
+        <div class="grid main">
+            <h1>Abstract</h1>
+        </div>
+        <div class="grid sidebar"><h1>Sidebar</h1>
+            <ul>
+                <li><a href=""><h2>link1</h2></a></li>
+                <li><a href=""><h2>link2</h2></a></li>
+                <li><a href=""><h2>link3</h2></a></li>
+                <li><a href=""><h2>link4</h2></a></li>
+            </ul>
+        </div>
+        <div class="grid content">
+            <p>
+                Hepatocellular Carcinoma (HCC) is one of higher malignant in cancers of human in the world. In addition, 
+    HCC mortality rate for 20 years is the leading cause of cancer death in Taiwan. The primary carcinogenic factors 
+    includes hepatitis virus infection and other are caused by alcohol abuse, and ingestion of carcinogen such as aflatoxin, etc.
+     HCC has the characteristics of high level metastasis, angiogenesis, and recurrence after surgery.
+    
+        In this study, we focused on how to effectively prevent metastasis and angiogenesis of HCC. Recently, it becomes important to use the Chinese Herbal
+       Medicine (CHM) as a therapeutic strategy for the treatment of diseases. Here, we found that among 10 kinds of CHMs, 
+       M1 could inhibit the cell migration at the dose less than half concentration of IC<sub>50</sub> (the half maximal inhibitory of 
+       concentration). M1 significantly inhibited the expression of Receptor Tyrosine Kinase, Epidermal Growth Factor Receptor (EGFR)
+       , and downstream, Ras, ERK, and Snail. Furthermore, another downstream pathway protein, Protein Kinase B (AKT), mammalian target 
+       of rapamycin (mTOR), Hypoxia-inducible factor 1-alpha (HIF1-α), and Vascular Endothelial Growth Factor A (VEGFA) were also 
+       inhibited. And the Matrix Metalloproteinases (MMPs), including MMP-2, MMP-9, which play an important role in metastasis 
+       mechanism, were also inhibited by M1. Epithelial–mesenchymal transition (EMT) markers, such as E-cadherin and N-cadherin, 
+       were effective altered by M1 treatment.
+     In the xenograft mice model, we observed the tumors growth sizes, weight, and protein
+        expressions were effectively inhibited by M1. In conclusions, we demonstrate that M1 has an inhibitory effect to suppress 
+        angiogenesis and metastasis of HCC in vitro and in vivo.
+            </p>
+        </div>
+        <div class="grid images"><h1>The Signal Pathway</h1><img src="800px-Signal_transduction_pathways.png"></div>
+        <div class="grid post"><h1>Post</h1></div>
+        <div class="grid footer"><h1>Footer</h1></div>
+
+
+    </div>
+</body>
+</html>
